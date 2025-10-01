@@ -18,7 +18,17 @@ export default function MacbookModel16(props) {
     const { color } = useMacbookStore();
   const { nodes, materials, scene} = useGLTF('/models/macbook-16-transformed.glb')
 
+// src/components/models/Macbook-16.jsx
+
+// …other imports…
+import { Color, SRGBColorSpace } from 'three';
+
+// …inside your component…
     const texture = useTexture('/screen.png');
+    texture.colorSpace = SRGBColorSpace;
+    texture.needsUpdate = true;
+    
+// …rest of your code…
 
     useEffect(() => {
         scene.traverse((child) => {
