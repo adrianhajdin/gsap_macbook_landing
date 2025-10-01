@@ -24,15 +24,11 @@ export default function MacbookModel16(props) {
 
     useEffect(() => {
         scene.traverse((child) => {
-            if (!child.isMesh) return;
-            if (noChangeParts.includes(child.name)) return;
-            // Clone once per mesh to avoid shared-material side effects
-            if (!child.userData.materialCloned) {
-                child.material = child.material.clone();
-                child.userData.materialCloned = true;
+            if (child.isMesh) {
+                if (!noChangeParts.includes(child.name)) {
+                    child.material.color = new Color(color);
+                }
             }
-            child.material.color = new Color(color);
-            child.material.needsUpdate = true;
         });
     }, [color, scene]);
 
