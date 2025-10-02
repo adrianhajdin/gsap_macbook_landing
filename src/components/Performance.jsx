@@ -68,18 +68,16 @@ const Performance = () => {
         <section id="performance" ref={sectionRef}>
             <h2>Next-level graphics performance. Game on.</h2>
 
-            <div className="wrapper">
              <div className="wrapper">
                 {performanceImages.map((item, index) => (
                     <img
                         key={index}
                         src={item.src}
                         className={item.id}
-                        alt={item.alt || ""}
+                        alt={item.alt || `Performance Image #${index + 1}`}
                     />
                 ))}
              </div>
-            </div>
 
             <div className="content">
                 <p>
