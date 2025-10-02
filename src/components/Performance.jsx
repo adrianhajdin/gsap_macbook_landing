@@ -79,6 +79,7 @@ const Performance = () => {
                     />
                 ))}
              </div>
+            </div>
 
             <div className="content">
                 <p>
