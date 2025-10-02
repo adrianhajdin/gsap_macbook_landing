@@ -312,6 +312,10 @@ body {
                     }
                 }
 
+                p {
+                    @apply font-semibold text-4xl max-w-2xs;
+                }
+
                 div:last-of-type {
                     @apply bg-[#1D1D1F] p-10 rounded-3xl flex items-center gap-7;
 
@@ -324,6 +328,9 @@ body {
             .right-column {
                 @apply flex flex-col justify-between gap-5 opacity-0 -translate-y-5;
 
+                p {
+                    @apply font-semibold text-4xl max-w-2xs;
+                }
                 .apple-gradient {
                     @apply p-10 rounded-3xl flex items-center gap-7 relative;
 
